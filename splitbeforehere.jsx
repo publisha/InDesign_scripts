@@ -5,31 +5,33 @@ StorySplitter
 An InDesign CS/CS2/CS3 JavaScript by FourAces
 © The Final Touch 2006
 Version 3.0.0
- 
- 
+
+
 Splits the selected Story to separate Text Frames, while maintaining their contents.
 ---------------------------------------------------------------------- --------------------------------------------
 Update by Naomi Kennedy
 With modification by Chris Jennings
+What modifications?
+I made sure that the file stays on the page where last split.
 */
 #targetengine "session"
 app.scriptPreferences.enableRedraw = 0;
- 
+
 var myScriptVer = "3.0";
- 
- 
- 
+
+
+
 if(app.documents.length != 0){
     mySplitBefore();
 }else{
           alert("No Active Document Found.\nPlease open an InDesign document and select a Story to split.");
 }
- 
- 
+
+
 //-------------------------------------------------------------------- --------
- 
- 
- 
+
+
+
 function mySplitBefore(){
           var mySelection = app.activeDocument.selection;
           if(mySelection[0].previousTextFrame == null){
@@ -52,5 +54,3 @@ function mySplitBefore(){
                     }
           }
 }
- 
- 
